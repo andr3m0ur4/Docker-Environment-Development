@@ -1,4 +1,3 @@
-version: "3.7"
 services:
 
   php-apache:
@@ -54,6 +53,13 @@ services:
     networks:
       - development
 
+  redis:
+    container_name: redis
+    image: redis:latest
+    ports:
+      - 6379:6379
+    networks:
+      - development
 
 networks:
   development:
